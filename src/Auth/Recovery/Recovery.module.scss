@@ -1,0 +1,11 @@
+.recovery_container {
+  display: flex;
+  .recovery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .recovery_text {
+      margin-top: 40px;
+    }
+  }
+}
