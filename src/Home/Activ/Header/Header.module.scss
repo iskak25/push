@@ -1,0 +1,32 @@
+@use '../../../assest/mixin/style.module.scss' as m;
+.text {
+  width: 1440px;
+
+  @include m.dcenter;
+  flex-direction: column;
+  padding-top: 80px;
+  @include m.textNav(500, #000);
+  .text_h1 {
+  }
+  .img {
+    img {
+      margin-top: 120px;
+      @media screen and (max-width: 508px) {
+        width: 700px;
+        margin-bottom: 50px;
+
+        height: 340px;
+      }
+    }
+  }
+  .header_button {
+    width: 211px;
+    height: 59px;
+
+    background: #db66e4;
+
+    border: 1px solid #c192ee;
+    border-radius: 15px;
+    cursor: pointer;
+  }
+}
