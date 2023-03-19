@@ -1,5 +1,6 @@
 import React from 'react'
-import Login from '../Auth/Login/Login'
+import Login from '../Models/Auth/Login/Login'
+import LoginUser from '../Models/Auth/LoginUser/LoginUser'
 
 const AuthPages = () => {
   return (

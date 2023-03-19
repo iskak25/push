@@ -1,0 +1,33 @@
+@use '../../../../assest/mixin/all.scss' as all;
+.numberInput_text {
+  // margin-top: 80px;
+  p {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 39px;
+
+    color: #000000;
+    span {
+      color: #7f3a85;
+    }
+  }
+}
+.numberInput_input {
+  .input {
+    @include all.onlyInput();
+    border: none;
+    @include all.text('Inter', 'normal', 500, 2em, #000);
+    text-align: center;
+  }
+  .input_activ {
+    @include all.onlyInput();
+    border: 1px solid #c192ee;
+  }
+}
+.btn {
+  @include all.authButton(763px, 62px);
+  @include all.text('Inter', 'normal', 500, 1.125em, #fff);
+  margin-top: 80px;
+}

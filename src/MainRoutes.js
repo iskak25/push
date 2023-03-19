@@ -1,15 +1,23 @@
 import { Navigate, Route, Routes } from 'react-router-dom'
-import LoginUser from './Auth/LoginUser/LoginUser'
-import Recovery from './Auth/Recovery/Recovery'
 import Navbar from './components/Navbar/Navbar'
+import LoginUser from './Models/Auth/LoginUser/LoginUser'
+import FirstRecovery from './Models/Auth/Recovery/FirstRecovery/FirstRecovery'
+// import Recovery from './Models/Auth/Recovery/Recovery'
+import RootRecovere from './Models/Auth/Recovery/RootRecovery/RootRecovery'
+import IsActiv from './Models/Home/IsActiv/IsActiv'
 import AuthPages from './pages/AuthPages'
-import Home from './pages/Home'
+import ConferencesPages from './pages/ConferencesPages'
+import HomePages from './pages/HomePages'
+import MentorPages from './pages/MentorPages'
+import ShopPages from './pages/ShopPages'
+import TrainingsPages from './pages/TrainingsPages'
+import VideolessonsPages from './pages/VideolessonsPages'
 
 const MainRoutes = () => {
   const PUBLIC_ROUTES = [
     {
       link: '/',
-      element: <Home />,
+      element: <HomePages />,
       id: 1,
     },
     {
@@ -24,11 +32,46 @@ const MainRoutes = () => {
     },
     {
       link: '/recovery',
-      element: <Recovery />,
+      element: <RootRecovere />,
       id: 4,
     },
+    {
+      link: '/activ',
+      element: <RootRecovere />,
+      id: 5,
+    },
+    // {
+    //   link: '/',
+    //   element: <RootRecovere />,
+    //   id: 6,
+    // },
+    {
+      link: '/mentor',
+      element: <MentorPages />,
+      id: 7,
+    },
+    {
+      link: '/trainings',
+      element: <TrainingsPages />,
+      id: 8,
+    },
+    {
+      link: '/shop',
+      element: <ShopPages />,
+      id: 9,
+    },
+    {
+      link: '/conferences',
+      element: <ConferencesPages />,
+      id: 10,
+    },
+    {
+      link: '/videolessons',
+      // element: <VideolessonsPagess />,
+      id: 11,
+    },
   ]
-  console.log('asdfg')
+  // console.log('asdfg')
   const PRIVATE_ROUTES = [
     {
       link: '/admin',

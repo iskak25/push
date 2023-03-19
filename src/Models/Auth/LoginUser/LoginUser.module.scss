@@ -1,0 +1,30 @@
+@use '../../../assest/mixin/all.scss' as all;
+.loginUser_container {
+  .content {
+    display: flex;
+    .loginUser {
+      // margin-top: 190px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .loginUser_input {
+        .loginUser_item {
+          .input_big {
+            @include all.authInput(740px, 60px, #fff);
+            border: none;
+          }
+          .input_big_activ {
+            @include all.authInput(740px, 60px, #fff);
+            border: 1px solid #c192ee;
+          }
+        }
+      }
+      .loginUser_button {
+        margin-top: 80px;
+        margin-bottom: 80px;
+      }
+      .loginUser_text {
+      }
+    }
+  }
+}

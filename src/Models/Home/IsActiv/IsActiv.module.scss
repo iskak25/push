@@ -1,0 +1,17 @@
+@use '../../../assest/mixin/all.scss' as all;
+
+.container {
+  background-color: #000;
+  .content {
+    @include all.displayCenter();
+    .img {
+      width: 309.89px;
+      height: 502.52px;
+    }
+    .button {
+      @include all.button(217px, 57px, #ffffff, 10px);
+      @include all.text('Inter', 'normal', 500, 18px, #000000);
+      border: none;
+    }
+  }
+}

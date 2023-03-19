@@ -1,10 +1,33 @@
-.header {
-  width: 1400px;
-  display: flex;
-  flex-direction: column;
-  .header_text h2 {
-    text-align: center;
+@use '../../assest/mixin/all.scss' as all;
+
+.rootContainer {
+  box-shadow: none;
+  background-color: transparent;
+  text-decoration: none;
+  .css-d9oaum-MuiSelect-select-MuiInputBase-input-MuiFilledInput-input.css-d9oaum-MuiSelect-select-MuiInputBase-input-MuiFilledInput-input.css-d9oaum-MuiSelect-select-MuiInputBase-input-MuiFilledInput-input {
+    display: flex;
+    align-items: center;
   }
-  button {
+
+  .link {
+    @include all.text('Poppins', 'normal', 400, 18px, #000);
+  }
+  .select {
+    display: flex;
+    align-items: center;
+    justify-content: content;
+    width: 107px;
+    height: 53px;
+    border: none;
+  }
+
+  .button {
+    @include all.button(211px, 59px, #db66e4, 15px);
+    @include all.text('Poppins', 'normal', 400, 18px, #fbfbfb);
+    border: none;
   }
 }
+
+// body {
+//   background-color: #c4c4c4;
+// }
