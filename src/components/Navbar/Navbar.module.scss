@@ -1,5 +1,7 @@
 @use '../../assest/mixin/all.scss' as all;
-
+input {
+  border: none;
+}
 .rootContainer {
   box-shadow: none;
   background-color: transparent;

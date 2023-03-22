@@ -22,6 +22,7 @@ import InputLabel from '@mui/material/InputLabel'
 import FormControl from '@mui/material/FormControl'
 import Select from '@mui/material/Select'
 import { NavigateBefore } from '@mui/icons-material'
+import { FormHelperText } from '@mui/material'
 
 const pages = [
   { page: 'Главная', link: '/' },
@@ -163,7 +164,22 @@ const Navbar = () => {
                 ))}
               </Box>
               <Box sx={{ flexGrow: 0 }}>
-                <select className={navStyle.select} name="flag" id="cars">
+                <FormControl sx={{ m: 1, minWidth: 120, border: 'none' }}>
+                  <Select
+                    value={age}
+                    onChange={handleChange}
+                    displayEmpty
+                    inputProps={{ 'aria-label': 'Without label' }}
+                  >
+                    <MenuItem value="">
+                      <em>None</em>
+                    </MenuItem>
+                    <MenuItem value={10}>Ten</MenuItem>
+                    <MenuItem value={20}>Twenty</MenuItem>
+                    <MenuItem value={30}>Thirty</MenuItem>
+                  </Select>
+                </FormControl>
+                {/* <select className={navStyle.select} name="flag" id="cars">
                   <option
                     style={{
                       backgroundImage:
@@ -172,7 +188,7 @@ const Navbar = () => {
                     value="KG"
                   >
                     <div className={navStyle.select_item}>
-                      {/* <img src={flag_kyrgyzstan} alt="flag_kyrgyzstan" /> */}
+                     
                       KG
                     </div>
                   </option>
@@ -182,7 +198,7 @@ const Navbar = () => {
                       RU
                     </div>
                   </option>
-                </select>
+                </select> */}
 
                 {/* <Tooltip title="Open settings">
                   <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>

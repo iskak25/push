@@ -18,7 +18,7 @@ export const signup = createAsyncThunk(
   'auth/signup',
   async (user, thunkAPI) => {
     try {
-      return await authService.registraton(user)
+      return await authService.signup(user)
     } catch (error) {
       const message =
         (error.response &&
@@ -36,7 +36,7 @@ export const signin = createAsyncThunk(
   'auth/signin',
   async (user, thunkAPI) => {
     try {
-      return await authService.login(user)
+      return await authService.signin(user)
     } catch (error) {
       const message =
         (error.response &&

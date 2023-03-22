@@ -28,13 +28,11 @@ const FirstAuth = (props) => {
     placeOfBirth: 'bishkek',
     phoneNumber: '0708207734',
   }
-
   console.log(vales)
   const userData = JSON.stringify(vales, null, 2)
   const dispatch = useDispatch()
 
   console.log(userData)
-  console.log('vgbjhjnk')
 
   const { user, isLoading, isError, isSuccess, message } = useSelector(
     (state) => state.auth,

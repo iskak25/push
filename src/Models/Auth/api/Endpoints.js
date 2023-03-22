@@ -1,4 +1,7 @@
 const Endpoints = {
+  BASE_URL: {
+    url: 'https://g4g.herokuapp.com/',
+  },
   AUTH: {
     LOGIN: '/api/v1/auth/login',
     REGISTER: '/api/v1/auth/register',
