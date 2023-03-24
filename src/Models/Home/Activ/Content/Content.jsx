@@ -3,6 +3,7 @@ import contentStyle from './Content.module.scss'
 import mentor from '../../../../assest/img/mentor.png'
 import shop from '../../../../assest/img/shop.png'
 import trenink from '../../../..//assest/img/trenink.png'
+import YouTube from '../../../../assest/img/YouTube.png'
 
 const Content = () => {
   return (
@@ -37,7 +38,11 @@ const Content = () => {
                   развивайся и достигай успеха
                 </p>
               </div>
-              <img className={contentStyle.item_img} src="" alt="" />
+              <img
+                className={contentStyle.item_img}
+                src={YouTube}
+                alt="YouTube"
+              />
             </div>
             <button className={contentStyle.item_button}>подробнее</button>
           </div>

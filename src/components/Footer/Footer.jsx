@@ -40,26 +40,34 @@ const Footer = () => {
                 </Link>
               </div>
               <div className={footerStyle.right_logo}>
-                <img
-                  className={footerStyle.right_logo_item}
-                  src={facebook}
-                  alt="facebook"
-                />
-                <img
-                  className={footerStyle.right_logo_item}
-                  src={tikTok}
-                  alt="tikTok"
-                />
-                <img
-                  className={footerStyle.right_logo_item}
-                  src={telegram}
-                  alt="telegram"
-                />
-                <img
-                  className={footerStyle.right_logo_item}
-                  src={instagram}
-                  alt="instagram"
-                />
+                <a href="*">
+                  <img
+                    className={footerStyle.right_logo_item}
+                    src={facebook}
+                    alt="facebook"
+                  />
+                </a>
+                <a href="*">
+                  <img
+                    className={footerStyle.right_logo_item}
+                    src={tikTok}
+                    alt="tikTok"
+                  />
+                </a>
+                <a href="@iskak2512">
+                  <img
+                    className={footerStyle.right_logo_item}
+                    src={telegram}
+                    alt="telegram"
+                  />
+                </a>
+                <a href="https://www.instagram.com/">
+                  <img
+                    className={footerStyle.right_logo_item}
+                    src={instagram}
+                    alt="instagram"
+                  />
+                </a>
               </div>
             </div>
 

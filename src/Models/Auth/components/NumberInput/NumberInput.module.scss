@@ -2,7 +2,7 @@
 .numberInput_text {
   // margin-top: 80px;
   p {
-    font-family: 'Inter';
+    font-family: 'Poppins';
     font-style: normal;
     font-weight: 500;
     font-size: 32px;
@@ -15,10 +15,12 @@
   }
 }
 .numberInput_input {
+  // display: flex;
   .input {
-    @include all.onlyInput();
-    border: none;
-    @include all.text('Inter', 'normal', 500, 2em, #000);
+    // @include all.onlyInput();
+    // border: none;
+    @include all.text('Poppins', 'normal', 500, 2em, #000);
+    display: flex;
     text-align: center;
   }
   .input_activ {
@@ -28,6 +30,6 @@
 }
 .btn {
   @include all.authButton(763px, 62px);
-  @include all.text('Inter', 'normal', 500, 1.125em, #fff);
+  @include all.text('Poppins', 'normal', 500, 1.125em, #fff);
   margin-top: 80px;
 }

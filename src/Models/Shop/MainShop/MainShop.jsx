@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import mainShopStyle from './MainShop.module.scss'
 import shop1 from '../../../assest/img/shop1.jpg'
 import shop2 from '../../../assest/img/shop2.jpg'
@@ -6,13 +6,25 @@ import shop3 from '../../../assest/img/shop3.jpg'
 import shop4 from '../../../assest/img/shop4.jpg'
 import star from '../../../assest/img/star.svg'
 import star_activ from '../../../assest/img/star_activ.svg'
+import ModalShop from '../../../components/Modal/ModalShop/ModalShop'
+import zIndex from '@mui/material/styles/zIndex'
 
 const MainShop = () => {
+  const [modalActiv, setModalActiv] = useState(false)
+
   return (
     <>
-      <div className={mainShopStyle.container}>
+      <ModalShop
+        style={{ zIndex: '0' }}
+        activ={modalActiv}
+        setActiv={setModalActiv}
+      />
+      <div className={modalActiv ? 'dislay:"none"' : mainShopStyle.container}>
         <div className={mainShopStyle.content}>
-          <div className={mainShopStyle.item}>
+          <div
+            onClick={() => setModalActiv(true)}
+            className={mainShopStyle.item}
+          >
             <div className={mainShopStyle.item_header}>
               <div className={mainShopStyle.discount}>
                 <p className={mainShopStyle.discount_p}>Скидка</p>
@@ -39,7 +51,10 @@ const MainShop = () => {
               </div>
             </div>
           </div>
-          <div className={mainShopStyle.item}>
+          <div
+            onClick={() => setModalActiv(true)}
+            className={mainShopStyle.item}
+          >
             <div className={mainShopStyle.item_header}>
               <div className={mainShopStyle.discount}>
                 <p className={mainShopStyle.discount_p}>Скидка</p>
@@ -66,7 +81,10 @@ const MainShop = () => {
               </div>
             </div>
           </div>
-          <div className={mainShopStyle.item}>
+          <div
+            onClick={() => setModalActiv(true)}
+            className={mainShopStyle.item}
+          >
             <div className={mainShopStyle.item_header}>
               <div className={mainShopStyle.discount}>
                 <p className={mainShopStyle.discount_p}>Скидка</p>
@@ -93,7 +111,10 @@ const MainShop = () => {
               </div>
             </div>
           </div>
-          <div className={mainShopStyle.item}>
+          <div
+            onClick={() => setModalActiv(true)}
+            className={mainShopStyle.item}
+          >
             <div className={mainShopStyle.item_header}>
               <div className={mainShopStyle.discount}>
                 <p className={mainShopStyle.discount_p}>Скидка</p>

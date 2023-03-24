@@ -1,12 +1,10 @@
-import $api from '../api/interceptors'
 import Endpoints from '../api/Endpoints'
-
 import axios from 'axios'
 
 // SignUp user
 const signup = async (userData) => {
   const response = await axios.post(
-    `${Endpoints.BASE_URL.url}${Endpoints.AUTH.REFRESH}`,
+    `${Endpoints.BASE_URL.url}${Endpoints.AUTH.REGISTER}`,
     userData,
     {
       headers: { 'Content-Type': 'application/json' },
@@ -33,9 +31,21 @@ const signin = async (userData) => {
   return response.data
 }
 
+// activ user
+
+const activUser = async (code) => {
+  console.log(typeof code)
+  const response = await axios.get(
+    `${Endpoints.BASE_URL.url}/api/v1/auth/active/${code}`,
+    code,
+  )
+  return response.data
+}
+
 const authService = {
   signup,
   signin,
+  activUser,
 }
 
 export default authService

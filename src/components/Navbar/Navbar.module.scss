@@ -1,5 +1,13 @@
 @use '../../assest/mixin/all.scss' as all;
-input {
+fieldset {
+  border: none !important;
+}
+li {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+}
+.css-1d3z3hw-MuiOutlinedInput-notchedOutline {
   border: none;
 }
 .rootContainer {
@@ -21,6 +29,12 @@ input {
     width: 107px;
     height: 53px;
     border: none;
+  }
+
+  .language {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 
   .button {

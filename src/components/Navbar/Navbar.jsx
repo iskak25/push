@@ -170,13 +170,23 @@ const Navbar = () => {
                     onChange={handleChange}
                     displayEmpty
                     inputProps={{ 'aria-label': 'Without label' }}
+                    sx={{ display: 'flex', justifyContent: 'center' }}
                   >
                     <MenuItem value="">
-                      <em>None</em>
+                      <em sx={{ display: 'flex', justifyContent: 'center' }}>
+                        <div className={navStyle.language}>
+                          RU <img src={FlagRuss} alt="FlagRuss" />
+                        </div>
+                      </em>
                     </MenuItem>
-                    <MenuItem value={10}>Ten</MenuItem>
-                    <MenuItem value={20}>Twenty</MenuItem>
-                    <MenuItem value={30}>Thirty</MenuItem>
+                    {/* <MenuItem value={10}>
+                      RU <img src={FlagRuss} alt="FlagRuss" />
+                    </MenuItem> */}
+                    <MenuItem value={20}>
+                      <div className={navStyle.language}>
+                        KG <img src={flag_kyrgyzstan} alt="flag_kyrgyzstan" />
+                      </div>
+                    </MenuItem>
                   </Select>
                 </FormControl>
                 {/* <select className={navStyle.select} name="flag" id="cars">

@@ -41,6 +41,7 @@ const WeOffer = () => {
                         borderStyle: 'solid',
                       }
                     : {
+                        borderRadius: '18px',
                         height: '80px',
                         borderWidth: '2px',
                         borderColor: '#fff',
@@ -63,6 +64,7 @@ const WeOffer = () => {
                               height: '50px',
                             }
                           : {
+                              borderRadius: '18px',
                               height: '80px',
                               backgroundColor: '#fff',
                               borderRadius: '100%',
@@ -98,12 +100,14 @@ const WeOffer = () => {
                 style={
                   expanded == 'panel2'
                     ? {
+                        borderRadius: '14px',
                         height: '230px',
                         borderWidth: '2px',
                         borderColor: '#c192ee',
                         borderStyle: 'solid',
                       }
                     : {
+                        borderRadius: '18px',
                         height: '80px',
                         borderWidth: '2px',
                         borderColor: '#fff',
@@ -119,12 +123,14 @@ const WeOffer = () => {
                       style={
                         expanded == 'panel2'
                           ? {
+                              borderRadius: '14px',
                               backgroundColor: '#C192EE',
                               borderRadius: '100%',
                               width: '50px',
                               height: '50px',
                             }
                           : {
+                              borderRadius: '18px',
                               backgroundColor: '#fff',
                               borderRadius: '100%',
                               width: '50px',
@@ -159,12 +165,14 @@ const WeOffer = () => {
                 style={
                   expanded == 'panel3'
                     ? {
+                        borderRadius: '14px',
                         height: '230px',
                         borderWidth: '2px',
                         borderColor: '#c192ee',
                         borderStyle: 'solid',
                       }
                     : {
+                        borderRadius: '18px',
                         height: '80px',
                         borderWidth: '2px',
                         borderColor: '#fff',

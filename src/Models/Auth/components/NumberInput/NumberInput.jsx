@@ -22,6 +22,7 @@ const NumberInput = () => {
     setPinCode(pinCode)
     setBtnIsPressed(false)
   }
+  console.log(pinCode)
 
   return (
     <>
@@ -36,19 +37,26 @@ const NumberInput = () => {
           // {...props}
           id="pinCode"
           type="number"
+          inputStyle={{
+            width: '118px',
+            height: '118px',
+            margin: '10px',
+            backgroundColor: '#fff',
+            borderRadius: '20px',
+            border: '1px solid #C192EE',
+            fontFamily: 'Poppins',
+            fontStyle: 'normal',
+            fontWeight: '500',
+            fontSize: '2em',
+            textAlign: 'center',
+          }}
           isValid={isPinCodeValid}
           fields={4}
           onChange={handlePinChange}
           value={pinCode}
           className={numberInputStyle.input}
+          placeholder="-"
         />
-        {/* <input className={numberInputStyle.input} type="text" placeholder="-" />
-        <input className={numberInputStyle.input} type="text" placeholder="-" />
-        <input className={numberInputStyle.input} type="text" placeholder="-" />
-        <input className={numberInputStyle.input} type="text" placeholder="-" /> */}
-        {/* готовая фукция  */}
-        {/* <button onClick={checkPinCode}>Check pin</button> */}
-        {/* готовая фукция  */}
       </div>
       <div></div>
     </>

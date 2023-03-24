@@ -1,0 +1,88 @@
+@use '../../../assest/mixin/all.scss' as all;
+.modal_activ {
+  pointer-events: all !important;
+  opacity: 1 !important;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.5s;
+
+  .modal_content_activ {
+    transform: scale(1);
+    padding: 20px;
+    border-radius: 12px;
+    background-color: #fff;
+    width: 1084px;
+    height: 709px;
+    //  transform: scale(0.5);
+    transition: 0.4s all !important;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.5fr 5fr;
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 20px;
+    .item_img {
+      @include all.displayCenter();
+      flex-direction: column;
+      .item_img__img {
+      }
+      .item_img__p {
+      }
+    }
+    .item_text {
+      @include all.displayCenter();
+      flex-direction: column;
+      .text_heder {
+        .text_heder_h3 {
+        }
+      }
+      .text_center {
+      }
+      .text_heder {
+        .text_heder_p {
+        }
+      }
+      .border {
+        .border_img {
+        }
+        .border_p {
+        }
+      }
+    }
+  }
+}
+.modal {
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0);
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.5s;
+
+  .modal_content {
+    padding: 20px;
+    border-radius: 12px;
+    background-color: #000;
+    height: 40px;
+    width: 40px;
+    transform: scale(0.5);
+    transition: 0.4s all;
+  }
+}

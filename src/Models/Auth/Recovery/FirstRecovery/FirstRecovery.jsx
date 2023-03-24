@@ -7,7 +7,9 @@ const FirstRecovery = (props) => {
     <>
       <div className={FirstRecoveryStyle.container}>
         <div className={FirstRecoveryStyle.content}>
-          <h2 className={FirstRecoveryStyle.h2}>Восстановления пароля</h2>
+          <h2 className={FirstRecoveryStyle.h2}>
+            Восстановления <br /> пароля
+          </h2>
           <input
             type="email"
             placeholder="e-mail"

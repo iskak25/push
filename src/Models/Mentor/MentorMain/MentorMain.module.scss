@@ -11,7 +11,7 @@
       height: 741px;
 
       .main_text_h2 {
-        @include all.text('Inter', 'normal', 500, 3.125em, #fbfbfb);
+        @include all.text('Poppins', 'normal', 500, 3.125em, #fbfbfb);
         text-align: center;
       }
       .main_btn {

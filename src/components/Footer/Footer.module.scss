@@ -27,7 +27,7 @@
           width: 700px;
 
           .text_p {
-            @include all.text('Poppins', 'normal', 400, 1em, #000);
+            @include all.text('Poppins', 'normal', 500, 1em, #000);
           }
         }
         .right_logo {
@@ -44,7 +44,7 @@
           width: 100%;
           background-color: #c192ee;
           border: 1.5px solid #c192ee;
-          transform: rotate(-0.04deg);
+          // transform: rotate(-0.04deg);
         }
       }
       .end {

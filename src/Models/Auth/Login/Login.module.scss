@@ -1,7 +1,10 @@
 .container {
+  background-color: #fbfbfb;
+  width: 100%;
   .content {
-    background-color: #fbfbfb;
+    margin: 0 auto;
     width: 1440px;
+    min-height: 1440px;
     .content_item {
       display: flex;
       .login_heder {

@@ -6,6 +6,7 @@
   // margin: 0 auto;
   // width: 100%;
   width: 1440px;
+  background-color: #fbfbfb;
   .container {
     // margin-bottom: 30px;
     .header {
@@ -21,6 +22,7 @@
     .content {
       // display: flex;
       .content_item {
+        box-shadow: none !important;
         // display: flex;
         margin-bottom: 12px;
         width: 1366px;

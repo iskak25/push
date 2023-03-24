@@ -12,40 +12,44 @@ import {
 } from '../../../../redux/features/auth/AuthSlice'
 
 const FirstAuth = (props) => {
-  const [name, setName] = useState('')
+  function newPages() {
+    props.onNext()
+    dispatch(signup(userData))
+    console.log('new')
+  }
   const [lastName, setLastName] = useState('')
-  const [phone, setPhone] = useState('')
+  const [firstName, setFirstName] = useState('')
+  const [phoneNumber, setPhoneNumber] = useState('')
   const [email, setEmail] = useState('')
-  const [passward, setPassward] = useState('')
-  const [checPassward, setChecPassward] = useState('')
+  const [password, setPassword] = useState('')
+  const [confirmPass, setConfirmPass] = useState('')
+  const [placeOfBirth, setPlaceOfBirth] = useState('')
 
   const vales = {
-    email: 'iskak2512@gmail.com',
-    firstName: 'iskak',
-    lastName: 'bek',
-    password: '1234567',
-    confirmPass: '1234567',
-    placeOfBirth: 'bishkek',
-    phoneNumber: '0708207734',
+    email,
+    firstName,
+    lastName,
+    password,
+    confirmPass,
+    placeOfBirth,
+    phoneNumber,
   }
-  console.log(vales)
   const userData = JSON.stringify(vales, null, 2)
   const dispatch = useDispatch()
-
-  console.log(userData)
 
   const { user, isLoading, isError, isSuccess, message } = useSelector(
     (state) => state.auth,
   )
   useEffect(() => {
     // if (isError) {
-    //   toast.error(message)
+    // toast.error(message)
     // }
 
-    // if (isSuccess) {
-    //   navigate('/signin')
-    //   toast.success(message)
-    // }
+    if (isSuccess) {
+      newPages()
+      // navigate('')
+      // toast.success(message)
+    }
 
     dispatch(reset())
   }, [user, isError, isSuccess, message, dispatch])
@@ -56,8 +60,8 @@ const FirstAuth = (props) => {
         <div className={firstStyle.first}>
           <div className={firstStyle.first_item}>
             <input
-              onChange={(e) => setName(e.target.value)}
-              value={name}
+              onChange={(e) => setFirstName(e.target.value)}
+              value={firstName}
               className={firstStyle.input_small}
               type="text"
               placeholder="имя"
@@ -72,11 +76,12 @@ const FirstAuth = (props) => {
           </div>
           <div className={firstStyle.first_item}>
             <input
-              onChange={(e) => setPhone(e.target.value)}
+              onChange={(e) => setPhoneNumber(e.target.value)}
               className={firstStyle.input_big}
-              type="text"
+              type="number"
               placeholder="номер телефона"
-              value={phone}
+              value={phoneNumber}
+              pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"
             />
           </div>
           <div className={firstStyle.first_item}>
@@ -88,25 +93,33 @@ const FirstAuth = (props) => {
               value={email}
             />
             <input
-              onChange={(e) => setPassward(e.target.value)}
+              onChange={(e) => setPassword(e.target.value)}
               className={firstStyle.input_small}
               type="password"
               placeholder="пароль вашего e-mail"
-              value={passward}
+              value={password}
             />
           </div>
           <div className={firstStyle.first_item}>
             <input
-              onChange={(e) => setChecPassward(e.target.value)}
-              className={firstStyle.input_big}
+              onChange={(e) => setPlaceOfBirth(e.target.value)}
+              className={firstStyle.input_small}
+              type="text"
+              placeholder="место проживания"
+              value={placeOfBirth}
+            />
+            <input
+              className={firstStyle.input_small}
+              onChange={(e) => setConfirmPass(e.target.value)}
               type="password"
               placeholder="подтверждение пароля"
-              value={checPassward}
+              value={confirmPass}
             />
           </div>
+
           <div className={firstStyle.first_text}>
             <input
-              onChange={(e) => setChecPassward(e.target.value)}
+              // onChange={(e) => setChecPassword(e.target.value)}
               type="checkbox"
             />
             <Text
@@ -116,7 +129,8 @@ const FirstAuth = (props) => {
           </div>
           <div className={firstStyle.first_button}>
             <button
-              onClick={() => dispatch(signup(userData))}
+              type="submit"
+              onClick={() => newPages()}
               className={firstStyle.first_btn}
             >
               Зарегистрироваться

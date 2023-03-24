@@ -27,12 +27,12 @@
         .listOne {
           margin-left: 25px;
           margin-top: 31px;
-          @include all.text('Inter', 'normal', 400, 2em, #fbfbfb);
+          @include all.text('Poppins', 'normal', 400, 2em, #fbfbfb);
         }
         .listTwo {
           @include all.displayCenter();
           .listTwo_btn {
-            @include all.text('Inter', 'normal', 500, 1em, #fbfbfb);
+            @include all.text('Poppins', 'normal', 500, 1em, #fbfbfb);
             @include all.button(217px, 56px, #c192ee, 10px);
             border: none;
           }

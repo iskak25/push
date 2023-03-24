@@ -5,7 +5,7 @@
   .button {
     .btn {
       @include all.authButton(763px, 62px);
-      @include all.text('Inter', 'normal', 500, 1.125em, #fff);
+      @include all.text('Poppins', 'normal', 500, 1.125em, #fff);
       margin-top: 80px;
     }
   }

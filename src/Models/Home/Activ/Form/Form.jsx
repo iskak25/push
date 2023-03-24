@@ -35,6 +35,9 @@ const Form = () => {
                 type="text"
                 className={formStyle.content_text__input}
               />
+              <span className={formStyle.content_text_span}>
+                Максимум 20 знаков
+              </span>
             </div>
             <div className={formStyle.content_text}>
               <h3 className={formStyle.content_text__h3}>Номер телефона</h3>
@@ -43,6 +46,9 @@ const Form = () => {
                 type="text"
                 className={formStyle.content_text__input}
               />
+              <span className={formStyle.content_text_span}>
+                Максимум 20 знаков
+              </span>
             </div>
           </div>
           <div className={formStyle.button}>

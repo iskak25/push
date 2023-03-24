@@ -1,9 +1,13 @@
 import React from 'react'
+import { useState } from 'react'
+import Modal from '../../../components/Modal/ModalMentor/ModalMentor'
 import allMentorStyle from './AllMentor.module.scss'
 
 const AllMentor = () => {
+  const [modalActiv, setModalActiv] = useState(false)
   return (
     <>
+      <Modal activ={modalActiv} setActiv={setModalActiv} />
       <div className={allMentorStyle.container}>
         <div className={allMentorStyle.content}>
           <h3 className={allMentorStyle.content_h3}>Наши ментора</h3>
@@ -13,7 +17,10 @@ const AllMentor = () => {
                 <p>Александр Васильев</p>
               </div>
               <div className={allMentorStyle.listTwo}>
-                <button className={allMentorStyle.listTwo_btn}>
+                <button
+                  onClick={() => setModalActiv(true)}
+                  className={allMentorStyle.listTwo_btn}
+                >
                   Подробнее
                 </button>
               </div>

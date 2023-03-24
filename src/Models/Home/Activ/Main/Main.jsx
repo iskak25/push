@@ -20,7 +20,7 @@ const Main = () => {
             </p>
           </div>
           <div className={mainStyle.main_item}>
-            <p className={mainStyle.main_item__p}>
+            <p id={mainStyle.icon} className={mainStyle.main_item__p__id}>
               Наша миссия - дать девочкам возможность поверить в себя и свои
               способности, повысить их самооценку и устойчивость, а также
               поддержать их в преодолении трудностей, связанных с взрослением в
