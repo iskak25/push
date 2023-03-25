@@ -26,36 +26,99 @@
     transition: 0.4s all !important;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 0.5fr 5fr;
-    display: grid;
-    grid-template-columns: 1fr 1.5fr;
-    grid-template-rows: 1fr;
-    grid-column-gap: 20px;
-    .item_img {
-      @include all.displayCenter();
-      flex-direction: column;
-      .item_img__img {
-      }
-      .item_img__p {
-      }
+    grid-template-rows: 0.1fr 9fr;
+    .modal_container__close {
+      display: flex;
+      justify-content: flex-end;
     }
-    .item_text {
-      @include all.displayCenter();
-      flex-direction: column;
-      .text_heder {
-        .text_heder_h3 {
+    .content {
+      display: grid;
+      grid-template-columns: 1fr 1.5fr;
+      grid-template-rows: 1fr;
+      grid-column-gap: 20px;
+      .item_img {
+        @include all.displayCenter();
+        flex-direction: column;
+        .item_img__img {
+          width: 286px;
+          height: 424px;
+        }
+        .item_img__p {
+          @include all.text('Poppins', 'normal', 700, 2em, #000);
         }
       }
-      .text_center {
-      }
-      .text_heder {
-        .text_heder_p {
+      .item_text {
+        @include all.displayCenter();
+        flex-direction: column;
+
+        min-width: 440px;
+        .text_heder {
+          width: 440px;
+          display: flex;
+          justify-content: space-between;
+          .text_heder_h3 {
+            @include all.text('Poppins', 'normal', 500, 2em, #000);
+          }
+          .text_heder_h2 {
+            @include all.text('Poppins', 'normal', 700, 2em, #000);
+          }
         }
-      }
-      .border {
-        .border_img {
+        .text_center {
+          margin-top: 36px;
+          @include all.text('Poppins', 'normal', 400, 1.25em, #000);
         }
-        .border_p {
+        .text_desck {
+          display: flex;
+          justify-content: space-between;
+          width: 440px;
+
+          .name {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            .name_p {
+              @include all.text('Sanchez', 'normal', 400, 1.25em, #000);
+              margin-bottom: 20px;
+            }
+          }
+          .price {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            .price_p {
+              margin-bottom: 20px;
+              @include all.text(
+                'Sanchez',
+                'normal',
+                400,
+                1.25em,
+                rgba(0, 0, 0, 0.6)
+              );
+            }
+          }
+        }
+
+        .border {
+          display: flex;
+          justify-content: space-around;
+          width: 440px;
+          align-items: center;
+          justify-content: flex-start;
+          height: 60px;
+          border: 1px solid rgba(0, 0, 0, 0.3);
+          margin: 10px 0 0 0;
+          .border_img {
+            margin: 0 15px;
+          }
+          .border_p {
+            @include all.text('Sanchez', 'normal', 400, 1.125em, #000);
+          }
+        }
+        .item_btn {
+          @include all.button(282px, 48px, #db66e4, 10px);
+          @include all.text('Sanchez', 'normal', 400, 1.125em, #fff);
+          border: none;
+          margin-top: 36px;
         }
       }
     }

@@ -20,6 +20,9 @@ li {
   }
 
   .link {
+    @include all.text('Poppins', 'normal', 400, 18px, #fff);
+  }
+  .link_activ {
     @include all.text('Poppins', 'normal', 400, 18px, #000);
   }
   .select {
@@ -38,6 +41,11 @@ li {
   }
 
   .button {
+    @include all.button(211px, 59px, #000, 15px);
+    @include all.text('Poppins', 'normal', 400, 18px, #fbfbfb);
+    border: 1px solid #fbfbfb;
+  }
+  .button_activ {
     @include all.button(211px, 59px, #db66e4, 15px);
     @include all.text('Poppins', 'normal', 400, 18px, #fbfbfb);
     border: none;

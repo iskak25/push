@@ -3,6 +3,7 @@ import modalShopStyle from './ModalShop.module.scss'
 import shop1 from '../../../assest/img/shop1.jpg'
 import shop_car from '../../../assest/img/shop_car.svg'
 import shop_lacaition from '../../../assest/img/shop_lacaition_Icon.svg'
+import close from '../../../assest/img/close_icon.svg'
 
 const ModalShop = ({ activ, setActiv }) => {
   return (
@@ -19,49 +20,66 @@ const ModalShop = ({ activ, setActiv }) => {
               : modalShopStyle.modal_content
           }
         >
-          <div className={modalShopStyle.item_img}>
+          <div
+            onClick={() => setActiv(false)}
+            className={modalShopStyle.modal_container__close}
+          >
             <img
-              className={modalShopStyle.item_img__img}
-              src={shop1}
-              alt="shop1"
+              className={modalShopStyle.modal_close_icon}
+              src={close}
+              alt="close"
             />
-            <h3 className={modalShopStyle.item_img__p}>Толстовка Весна</h3>
           </div>
-          <div className={modalShopStyle.item_text}>
-            <div className={modalShopStyle.text_heder}>
-              <h3 className={modalShopStyle.text_heder_h3}>Цена</h3>
-              <h3 className={modalShopStyle.text_heder_h3}>2990 сом</h3>
-            </div>
-            <p className={modalShopStyle.text_center}>Характеристики</p>
-            <div className={modalShopStyle.text_heder}>
-              <p className={modalShopStyle.text_heder_p}>Производство:</p>
-              <p className={modalShopStyle.text_heder_p}>400 cm</p>
-            </div>
-            <div className={modalShopStyle.text_heder}>
-              <p className={modalShopStyle.text_heder_p}>Цвет:</p>
-              <p className={modalShopStyle.text_heder_p}>150 cm</p>
-            </div>
-            <div className={modalShopStyle.text_heder}>
-              <p className={modalShopStyle.text_heder_p}>Размер:</p>
-              <p className={modalShopStyle.text_heder_p}>70 cm</p>
-            </div>
-            <div className={modalShopStyle.border}>
+          <div className={modalShopStyle.content}>
+            <div className={modalShopStyle.item_img}>
               <img
-                className={modalShopStyle.border_img}
-                src={shop_lacaition}
-                alt=""
+                className={modalShopStyle.item_img__img}
+                src={shop1}
+                alt="shop1"
               />
-              <p className={modalShopStyle.border_p}>Bishkek - 720075</p>
+              <h3 className={modalShopStyle.item_img__p}>Толстовка Весна</h3>
             </div>
-            <div className={modalShopStyle.border}>
-              <img
-                className={modalShopStyle.border_img}
-                src={shop_car}
-                alt=""
-              />
-              <p className={modalShopStyle.border_p}>
-                Delivery Between 1 week - 2 week
-              </p>
+            <div className={modalShopStyle.item_text}>
+              <div className={modalShopStyle.text_heder}>
+                <h3 className={modalShopStyle.text_heder_h3}>Цена</h3>
+                <h3 className={modalShopStyle.text_heder_h2}>2990 сом</h3>
+              </div>
+              <p className={modalShopStyle.text_center}>Характеристики</p>
+              <div className={modalShopStyle.text_desck}>
+                <div className={modalShopStyle.name}>
+                  <p className={modalShopStyle.name_p}>Производство:</p>
+                  <p className={modalShopStyle.name_p}>Цвет:</p>
+                  <p className={modalShopStyle.name_p}>Размер:</p>
+                </div>
+                <div className={modalShopStyle.price}>
+                  <p className={modalShopStyle.price_p}>400 cm</p>
+                  <p className={modalShopStyle.price_p}>150 cm</p>
+                  <p className={modalShopStyle.price_p}>70 cm </p>
+                </div>
+              </div>
+
+              <div className={modalShopStyle.border}>
+                <img
+                  className={modalShopStyle.border_img}
+                  src={shop_lacaition}
+                  alt=""
+                />
+                <p className={modalShopStyle.border_p}>Bishkek - 720075</p>
+              </div>
+              <div className={modalShopStyle.border}>
+                <img
+                  className={modalShopStyle.border_img}
+                  src={shop_car}
+                  alt=""
+                />
+                <p className={modalShopStyle.border_p}>
+                  Delivery Between 1 week - 2 week
+                </p>
+              </div>
+
+              <button className={modalShopStyle.item_btn}>
+                Добавить в корзину
+              </button>
             </div>
           </div>
         </div>

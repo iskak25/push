@@ -13,6 +13,7 @@ import Button from '@mui/material/Button'
 import Tooltip from '@mui/material/Tooltip'
 import MenuItem from '@mui/material/MenuItem'
 import logo_blaclk from '../../assest/img/logo_black.png'
+import logo_white from '../../assest/img/logo_white.png'
 import flag_kyrgyzstan from '../../assest/img/flag_kyrgyzstan.svg'
 import FlagRuss from '../../assest/img/FlagRuss.svg'
 import navStyle from './Navbar.module.scss'
@@ -23,6 +24,8 @@ import FormControl from '@mui/material/FormControl'
 import Select from '@mui/material/Select'
 import { NavigateBefore } from '@mui/icons-material'
 import { FormHelperText } from '@mui/material'
+import { useDispatch, useSelector } from 'react-redux'
+import { isActiv } from '../../redux/features/components'
 
 const pages = [
   { page: 'Главная', link: '/' },
@@ -59,6 +62,13 @@ const Navbar = () => {
   const handleOpenUserMenu = (event) => {
     setAnchorElUser(event.currentTarget)
   }
+  const activing = useSelector((state) => state.activ.stateActiv)
+
+  const dispatch = useDispatch()
+
+  console.log(isActiv)
+  console.log(activing)
+  console.log('sdfgh')
 
   return (
     <>
@@ -83,7 +93,11 @@ const Navbar = () => {
                   textDecoration: 'none',
                 }}
               >
-                <img src={logo_blaclk} alt="logo_blaclk" />
+                {activing ? (
+                  <img src={logo_blaclk} alt="logo_blaclk" />
+                ) : (
+                  <img src={logo_white} alt="logo_white" />
+                )}
               </Typography>
 
               <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -153,7 +167,7 @@ const Navbar = () => {
                 {pages.map((obj) => (
                   <Link to={obj.link}>
                     <Button
-                      className={navStyle.link}
+                      className={activing ? navStyle.link_activ : navStyle.link}
                       key={obj.page}
                       onClick={handleCloseNavMenu}
                       sx={{ my: 2, color: '#000', display: 'block' }}
@@ -165,29 +179,33 @@ const Navbar = () => {
               </Box>
               <Box sx={{ flexGrow: 0 }}>
                 <FormControl sx={{ m: 1, minWidth: 120, border: 'none' }}>
-                  <Select
-                    value={age}
-                    onChange={handleChange}
-                    displayEmpty
-                    inputProps={{ 'aria-label': 'Without label' }}
-                    sx={{ display: 'flex', justifyContent: 'center' }}
-                  >
-                    <MenuItem value="">
-                      <em sx={{ display: 'flex', justifyContent: 'center' }}>
-                        <div className={navStyle.language}>
-                          RU <img src={FlagRuss} alt="FlagRuss" />
-                        </div>
-                      </em>
-                    </MenuItem>
-                    {/* <MenuItem value={10}>
+                  {activing ? (
+                    <Select
+                      value={age}
+                      onChange={handleChange}
+                      displayEmpty
+                      inputProps={{ 'aria-label': 'Without label' }}
+                      sx={{ display: 'flex', justifyContent: 'center' }}
+                    >
+                      <MenuItem value="">
+                        <em sx={{ display: 'flex', justifyContent: 'center' }}>
+                          <div className={navStyle.language}>
+                            RU <img src={FlagRuss} alt="FlagRuss" />
+                          </div>
+                        </em>
+                      </MenuItem>
+                      {/* <MenuItem value={10}>
                       RU <img src={FlagRuss} alt="FlagRuss" />
                     </MenuItem> */}
-                    <MenuItem value={20}>
-                      <div className={navStyle.language}>
-                        KG <img src={flag_kyrgyzstan} alt="flag_kyrgyzstan" />
-                      </div>
-                    </MenuItem>
-                  </Select>
+                      <MenuItem value={20}>
+                        <div className={navStyle.language}>
+                          KG <img src={flag_kyrgyzstan} alt="flag_kyrgyzstan" />
+                        </div>
+                      </MenuItem>
+                    </Select>
+                  ) : (
+                    ''
+                  )}
                 </FormControl>
                 {/* <select className={navStyle.select} name="flag" id="cars">
                   <option
@@ -244,7 +262,11 @@ const Navbar = () => {
 
               <Box sx={{ flexGrow: 0 }}>
                 <Link to="/loginPage">
-                  <button className={navStyle.button}>
+                  <button
+                    className={
+                      activing ? navStyle.button_activ : navStyle.button
+                    }
+                  >
                     Зарегистрироваться
                   </button>
                 </Link>
